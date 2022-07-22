@@ -1,0 +1,11 @@
+
+
+----------------Student Data-----------------
+
+Id = 12
+Name = Sunita
+Marks = 98Id = 23
+Name = Raj
+Marks = 98Id = 34
+Name = Virali
+Marks = 98

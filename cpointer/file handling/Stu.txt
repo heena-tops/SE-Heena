@@ -1,0 +1,17 @@
+
+
+--------------Student Details---------------
+
+
+
+Id = 12
+Name = jaimin
+Marks = 90
+
+Id = 34
+Name = Sunita
+Marks = 78
+
+Id = 32
+Name = joy
+Marks = 78

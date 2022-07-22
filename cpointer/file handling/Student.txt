@@ -1,0 +1,10 @@
+
+ Id = 12
+ Name = hana
+ Marks = 76
+ Id = 32
+ Name = dhul
+ Marks = 65
+ Id = 21
+ Name = sett
+ Marks = 87

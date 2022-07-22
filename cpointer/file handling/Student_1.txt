@@ -1,0 +1,17 @@
+
+
+-------------------This is Student Data-------------------------
+
+
+
+Id = 12
+Name = hana
+Marks = 76
+
+Id = 23
+Name = dhul
+Marks = 89
+
+Id = 34
+Name = sett
+Marks = 98

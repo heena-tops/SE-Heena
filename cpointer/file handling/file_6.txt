@@ -1,0 +1,10 @@
+
+
+Name = Virali
+Marks = 89
+
+Name = Raj
+Marks = 78
+
+Name = Sunita
+Marks = 89

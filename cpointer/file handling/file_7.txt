@@ -1,0 +1,13 @@
+
+
+Id = 12
+Name = Hetsharee
+Marks = 98
+
+Id = 23
+Name = Raji
+Marks = 78
+
+Id = 43
+Name = Tanishka
+Marks = 89
