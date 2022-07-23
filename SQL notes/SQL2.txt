@@ -1,0 +1,222 @@
+How to show databases ? 
+
+	Syntax : show databases;
+--------------------------------------
+How to delete database from system ? 
+
+	Syntax : drop database database_name;
+	ex : drop database mydata;
+
+----------------------------------------
+How to use database ?
+
+	Syntax : use database_name;
+	ex : use mydata;
+==========================================================================
+DDL : Data Definition Language
+
+CREATE
+ALTER
+DROP
+TRUNCATE
+
+-------------------------------------------------------------------
+CREATE : use to create new data in databse 
+
+How to create table in databse? 
+
+	Syntax : create table table_name(col1 data_type,col2, data_type,...,coln data_type);
+	ex : 
+
+
+--------------------------------------------------------------
+When to modify a table ?
+
+ALTER : use to modify a table 
+
+	Syntax : alter table table_name {ADD/DROP/MODIFY} col_n data_type;
+
+ADD: 
+	Syntax : alter table table_name add col_n data_type;
+
+	>> How to add column at perticular position in table ?
+	
+		Syntax : alter table table_name add col_new data_type {after/before} col_name; 
+		ex : alter table Orders add Name varchar(50) after C_ID;
+
+	>> How to rename any column in table ?
+	
+		Syntax : alter table table_name rename column old_name to new_name;
+		ex : alter table Orders rename column  
+
+DROP:
+	Syntax : alter table table_name drop col_name;
+
+MODIFY:
+	Syntax : alter table table_name modify col_name data_type;
+
+How to rename table name ?
+
+	Syntax : alter table table_name rename to new_name;
+
+----------------------------------------------------------------------------
+
+TRUNCATE : use to remove data from table 
+
+	Syntax : truncate table table_name;
+
+----------------------------------------------------------------
+How to delete table from database ? 
+
+DROP : 
+	Syntax : drop table table_name;
+
+============================================================================
+
+DML : Data Manipulation Language 
+
+INSERT
+UPDATE
+DELETE
+
+INSERT : When you want to add data into a table
+
+How to insert data into a table ?
+
+	Syntax : insert into table_name(col1,col2,col3,...,coln) values(val1,val2,val3,..,valn);
+
+
+----------------------------------------
+How to modify existing data in a table ? 
+
+UPDATE : use to update info in table
+
+	Syntax : 
+
+	update table_name set col_n=val where condition;
+
+	ex: update Employee set Name="Raji" where Id=1;
+
+-----------------------------------------------------
+How to delete dat from a table?
+
+DELETE : use to delete data from table
+	Syntax :  delete from table_name where condition;
+
+	ex : delete from Employee where Id=2;
+
+==============================================================================
+
+DQL : Data Query Language
+
+SELECT : when you want to retrive perticular type of data
+
+	LIKE : 
+	select col_n from table_name where like'%li';
+
+	BETWEEN : 
+	select col_n from table_name where col_n between val-1 and val-2;
+
+	IN :
+	select * from table_name where City in (val1,val2,val3,...valn); 
+
+	ORDER BY:
+	select * from table_name order by ID ASC/DESC;
+
+	DISTINCT:
+	select distinct col_n from table_name;
+
+	GROUP BY:
+	select col_n from table_name group by col_n;
+
+	COUNT : 
+	select count(col) from table_name where condition;
+
+	HAVING:
+
+	//this retrive only the first occurance of your data
+	select * from table_name where condition having(arithmatic condition);
+
+	//if want to access multiple data use GROUP BY clause
+	select * from table_name group by col_n where condition having(arithmatic condition);
+
+==============================================================================
+
+DCL: Data Control language
+
+//to use these commands first needs to set autocommit=0
+
+COMMIT : use to save changes 
+
+ROLLBACK : to remove all the changes 
+
+
+==============================================================================
+
+when one needs to give and take back permission on perticular privileges to a perticulare user
+
+
+	// to use these privileges first you need to create a user
+
+	>> How to create a user ? 
+
+	Syntax : create user 'username'@'localhost' identified by 'password';
+	ex : create user 'Hana'@'localhost' identified by 'password';
+
+GRANT 
+REVOKE 
+
+	GRANT : to give permission on privileges to user 
+	
+		Syntax : grant privilege_name on database_name.table_name to 'username'@'localhost';
+		ex : grant SELECT,UPDATE on tops.Employee to 'Hana'@'localhost';
+
+		>> How to show grants for user ? 
+		Syntax : show grants for 'username'@'localhost';
+	-----------------------------------------------------------------------------------------------	
+
+	REVOKE : to take back permissions from user
+
+		Syntax : revoke privilege_name on database_name.table_name from 'username'@'localhost';
+		ex : revoke SELECT,UPDATE on tops.Employee from 'Hana'@'localhost';
+
+
+======================================================================================================
+
+
+JOIN IN SQL :
+
+There are mainly four types of JOINs in SQL listed below : 
+	
+	1. INNER JOIN
+	2. LEFT JOIN
+	3. RIGHT JOIN
+	4. FULL JOIN
+
+------------------------------------------------------------------------------------------------
+
+INNER JOIN : join the table based on common type of data
+
+	Syntax : SELECT table1.column1, table2.column2...FROM table1 INNER
+			JOIN table2 ON table1.common_filed = table2.common_field;
+
+	ex : select Orders.ID,Customers.Name,Orders.Product_name,Orders.Qty,Customers.ABC from Orders 
+			INNER JOIN Customers ON Orders.ID=Customers.ID;
+
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+

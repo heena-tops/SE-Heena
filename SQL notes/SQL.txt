@@ -1,0 +1,107 @@
+
+DDL : Data Definition Language
+
+How to show database available in system ?
+	Syntax : show databases;
+
+--------------------------------------------------
+How to create a new databse ?
+	syntax : create database database_name;
+	ex: create database Mydata;
+
+-------------------------------------------------
+How to use existing database ?
+	Syntax : use database_name;
+	ex : use mydata;
+
+--------------------------------------------------
+How to delete database?
+	Syntax : drop database database_name;
+	ex : drop databse mydata;
+
+---------------------------------------------------
+How to creatae a table in database ?
+
+	Syntax : create table table_name(col1 data_type, col2 data_type, col3 data_type, coln data_type );
+
+-------------------------------------------------------
+How to Empty any table ?
+
+	Syntax : truncate table table_name;
+	ex: truncate table Customer;
+----------------------------------------------------
+How to delete a table from database;
+
+	Synatx : drop table table_name;
+	ex: drop table Customer;
+
+----------------------------------------------------
+How to modify any table in databse ? 
+ALTER : 
+	Syntax : alter table table_name{ADD/MODIFY/DROP} col_name data_type;
+
+to delete any column:	
+ex: alter table Customer drop Contact;
+
+to add any column:
+ex: alter table Customer add City varchar(50);
+
+====================================================
+
+DML : Data Manupilation Language
+
+-------------------------------------------------------
+How to insert data in a table ? 
+	Syntax : insert into table_name(col1,col2,...,coln) values(data1, data2, data3, ... ,datan);
+
+------------------------------------------------
+How to show table?
+	Syntax : select * from table_name;
+	ex: select * from Student;
+
+---------------------------------------------------
+How to delete any record from table ?
+	Syntax : delete from table_name where condition;
+	ex: delete from Customer where Name='Sonali';
+
+-----------------------------------------------------
+How to update data in a table?
+
+	Syntax : update table_name set col1=val1, col2=val2,....coln=valn where condition;
+	ex : update Customer set Id=3 where Name='Virali';
+
+=========================================================
+
+DQL : Data Query Language
+
+	SELECT:
+-------------------------------------------------
+How to retrive whole table?
+
+	Syntax: select * from table_name;
+	ex: select * from Customer;
+
+----------------------------------------------
+How to retrive selected number of columns ?
+
+	Syntax : select col1,col3,col8 from table_name;
+	ex : select ID,Name,City from Customer;
+
+------------------------------------------
+How to retrive perticular data from table ?
+
+	ex : select ID,Name,City from Customer where ID=3; 
+
+
+	
+
+
+
+
+
+
+
+
+
+
+

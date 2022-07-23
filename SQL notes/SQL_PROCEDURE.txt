@@ -1,0 +1,76 @@
+
+INDEX : 
+
+>>How tocreate INDEX ?
+	
+	create index index_name on table_name;
+
+>>How to show index on table ?
+	
+	show index from table_name\G;
+
+>>How to delete index ?
+
+	drop index index_name on table_name;
+
+-----------------------------------
+
+What is SQL PROCUDURE ? 
+
+just works as functions 
+by which you can reuse existing query again and again 
+
+
+How to create a PROCEDURE ? 
+
+
+Syntax :
+
+	CREATE PROCEDURE 'procedure_name'()
+
+	BEGIN
+	sql_query;
+	
+	END
+
+Ex :
+
+	CREATE PROCEDURE 'stu_info'()
+
+	BEGIN
+	select * from Student;
+	
+	END
+
+
+How to execute that procedure ? 
+
+Syntax :
+	CALL procudure_name;
+
+DELIMITER &&
+CREATE PROCEDURE CREATE PROCEDURE SelectAllCustomers
+AS
+SELECT * FROM Customers
+GO;
+
+
+Ex : 
+	CALL stu_info;
+
+-----------------------------------------------
+
+
+//Delimiters can be used when you need to define the stored 
+procedures, function as well as to create triggers.
+
+>>To create procedure in mysql
+
+DELIMITER &&
+CREATE PROCEDURE emp_data()
+BEGIN
+select * from Employee;
+END &&
+
+>>To call procedure in mysql
+CALL emp_data(); &&
